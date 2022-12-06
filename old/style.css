@@ -1,0 +1,59 @@
+* {
+  font-family: "Helvetica";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+.training {
+  padding: 12px;
+}
+
+section {
+  padding: 12px;
+  background-color: #fafafa;
+  border: 1px solid black;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+section.closed article {
+  height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+article {
+  margin-top: 6px;
+  height: auto;
+}
+
+section p {
+  line-height: 1.2em;
+  margin-bottom: 12px;
+}
+
+section p:last-of-type {
+  margin-bottom: 0px;
+}
+
+h1 {
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+code {
+  display: block;
+  margin-top: 6px;
+  color: purple;
+  font-family: "Lucida Console", "Courier New", monospace;
+}

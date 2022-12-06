@@ -1,0 +1,149 @@
+* {
+  font-family: "Helvetica";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html {
+  font-size: 14px;
+}
+
+.training {
+  padding: 12px;
+}
+
+section {
+  padding: 12px;
+  background-color: #fafafa;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.1s all ease;
+}
+
+section.open {
+  background-color: #ebebeb;
+}
+
+section.open h2 {
+  color: red;
+}
+
+section button {
+  /* border: 1px solid red; */
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 3px;
+  right: 4px;
+  padding: 6px;
+  border: 0;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: 0.1s all ease;
+  color: red;
+}
+
+section:hover {
+  cursor: pointer;
+}
+
+section.closed article {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+section.closed button {
+  transform: rotate(-90deg);
+  color: black;
+}
+
+article {
+  margin-top: 9px;
+  max-height: 1000px;
+  transition: 0.1s all ease;
+  opacity: 1;
+}
+
+section p {
+  line-height: 1.2em;
+  margin-bottom: 9px;
+}
+
+section p:last-of-type {
+  margin-bottom: 0px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  margin-top: 3px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+code {
+  display: block;
+  margin-top: 6px;
+  color: red;
+  font-family: "Lucida Console", monospace;
+  font-weight: 400;
+}
+
+strong {
+  color: red;
+  font-family: "Lucida Console", monospace !important;
+  font-weight: 100;
+  margin: 0px 6px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 3px;
+  padding-top: 6px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: block;
+  max-width: 60px;
+  text-align: center;
+}
+
+.Finance {
+  padding: 12px;
+}
+
+.coins {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 6px;
+}
+
+.coin {
+  padding: 6px;
+  background-color: #fafafa;
+}
+
+.searchWrapper {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.searchWrapper input {
+  width: 100%;
+  padding: 6px;
+}
+
+.symbol {
+  font-weight: 800;
+}

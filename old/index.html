@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="training">
+      <section>
+        <h2>Shallow / Deep copy</h2>
+        <article>
+          <p>
+            A shallow copy of an object is a copy whose properties share the
+            same references (point to the same underlying values) as those of
+            the source object from which the copy was made. As a result, when
+            you change either the source or the copy, you may also cause the
+            other object to change too — and so, you may end up unintentionally
+            causing changes to the source or copy that you don't expect. That
+            behavior contrasts with the behavior of a deep copy, in which the
+            source and copy are completely independent.
+          </p>
+
+          <p>
+            In JavaScript, standard built-in object-copy operations (spread
+            syntax, Array.prototype.concat(), Array.prototype.slice(),
+            Array.from(), Object.assign(), and Object.create()) do not create
+            deep copies (instead, they create shallow copies).
+          </p>
+
+          <p>
+            One way to make a deep copy of a JavaScript object, if it can be
+            serialized, is to use JSON.stringify() to convert the object to a
+            JSON string, and then JSON.parse() to convert the string back into a
+            (completely new) JavaScript object.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Primitive Value</h2>
+        <article>
+          <p>
+            A primitive (primitive value, primitive data type) is data that is
+            not an object and has no methods or properties. There are 7
+            primitive data types: string number bigint boolean undefined symbol
+            null
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Array Length</h2>
+        <article>
+          <p>
+            "Array.length = value" will delete elements in Value is less than
+            the Array's actual length.
+          </p>
+
+          <p>
+            Some methods treat empty spots as undefined, and some skip them. It
+            depends on the method - older methods tend to skip, while newer ones
+            use Undefined.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Iterative Array Methods</h2>
+        <article>
+          <p>
+            every() filter() find() findIndex() findLast() findLastIndex()
+            flatMap() forEach() group()* groupToMap()* map() some()
+          </p>
+          <p>*experimental method with poor browser support</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>?? Operator (Nullish Coalescing)</h2>
+        <article>
+          <p>
+            The JavaScript double question mark (??) operator is called the
+            nullish coalescing operator and it provides a default value when a
+            variable or an expression evaluates to null or undefined.
+          </p>
+          <code>const favoriteFruit = null; </code>
+          <code>const result = favoriteFruit ?? 'You did not tell me'; </code>
+          <code>console.log(result); // "You did not tell me" </code>
+        </article>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
