@@ -2,8 +2,15 @@ import styles from "./App.module.css";
 import Training from "./Training";
 import Note from "./Note";
 import Async from "./Async";
+import React from "react";
+import ContextTraining from "./ContextTraining";
+import ThemeToggle from "./ThemeToggle";
+import { ThemeProvider, useTheme, useThemeUpdate } from "./ThemeContext";
+import { useEffect } from "react";
 
 function App() {
+  const darkTheme = useTheme();
+
   const notes = [
     {
       title: "Shallow / Deep copy",
@@ -91,12 +98,16 @@ function App() {
   ];
 
   return (
-    <div className={styles.training}>
-      <Training />
-      {notes.map((note) => (
-        <Note key={note.title} note={note} />
-      ))}
-      <Async />
+    <div className={darkTheme ? styles.darkTheme : styles.App}>
+      <ThemeToggle />
+      <div className={styles.training}>
+        <Training />
+        {notes.map((note) => (
+          <Note key={note.title} note={note} />
+        ))}
+        <Async />
+        <ContextTraining />
+      </div>
     </div>
   );
 }

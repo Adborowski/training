@@ -37,8 +37,6 @@ const Async = () => {
     console.log("Message:", message);
   };
 
-  sayHello();
-
   const notes = [
     {
       title: "Promise keywords",

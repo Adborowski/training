@@ -11,6 +11,22 @@ html {
   font-size: 14px;
 }
 
+.App {
+}
+
+.darkTheme {
+  background-color: rgb(10, 10, 47);
+}
+
+.darkTheme h1 {
+  color: white;
+}
+
+.darkTheme section {
+  background-color: darkblue;
+  color: white;
+}
+
 .training {
   padding: 12px;
 }
@@ -26,11 +42,15 @@ section {
 }
 
 section.open {
-  background-color: #ebebeb;
+  filter: brightness(1.2);
 }
 
 section.open h2 {
   color: red;
+}
+
+.darkTheme section.open h2 {
+  color: yellow;
 }
 
 section button {
@@ -46,6 +66,10 @@ section button {
   background-color: transparent;
   transition: 0.1s all ease;
   color: red;
+}
+
+.darkTheme section button {
+  color: yellow;
 }
 
 section:hover {
@@ -94,9 +118,14 @@ h2 {
 code {
   display: block;
   margin-top: 6px;
+  margin-bottom: 6px;
   color: red;
   font-family: "Lucida Console", monospace;
   font-weight: 400;
+}
+
+.darkTheme code {
+  color: lime;
 }
 
 strong {
@@ -146,4 +175,105 @@ a {
 
 .symbol {
   font-weight: 800;
+}
+
+.Zelda {
+  padding-top: 18px;
+}
+.monsters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 6px;
+  padding: 6px;
+}
+.monster {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.picture {
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.desc {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.themeToggle {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 3px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 500px;
+  background-color: #dadada;
+}
+
+.themeToggle button {
+  height: 20px;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-radius: 500px;
+  background-color: transparent;
+}
+
+.themeToggle button .indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 500px;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s all;
+  font-size: 10px;
+}
+
+.themeToggle button .indicator span {
+  display: block;
+  font-weight: 800;
+}
+
+.themeToggle button.on .indicator {
+  left: calc(100% - 20px);
+}
+
+.themeToggle button.off .indicator {
+  left: calc(0% + 60px);
+}
+
+.themeToggle button.on .indicator {
+  background-color: orange;
+  right: 0;
+}
+
+.themeToggle button.off .indicator {
+  background-color: darkblue;
+  left: 0;
+}
+
+.themeToggle button.off .indicator span {
+  color: white;
 }

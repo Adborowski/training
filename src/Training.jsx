@@ -206,8 +206,6 @@ const Training = () => {
     console.log(Object.values(object));
   };
 
-  objectMethods();
-
   return <h1>Training</h1>;
 };
 
